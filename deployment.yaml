@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: q6-app
+  name: q2-app
 spec:
   replicas: 2
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: q6-app
+      app: q2-app
   template:
     metadata:
       labels:
-        app: q6-app
+        app: q2-app
     spec:
       containers:
-      - name: q6-app
+      - name: q2-app
         image: nessa91/qn2:latest
         ports:
         - containerPort: 8080
